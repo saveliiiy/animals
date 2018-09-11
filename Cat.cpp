@@ -25,3 +25,35 @@ Cat::Cat() {
 	cin >> character;
 
 }
+
+void Cat::Vivod_in_not_fail() {
+	cout << endl << "Порода - " << breed << endl;
+	cout << "Окрас - " << color << endl;
+	cout << "Кличка - " << name << endl;
+	cout << "Пол - " << pol << endl;
+	cout << "Дата рождения - " << date_of_birth << endl;
+	cout << "Размеры - " << dimensions << endl;
+	cout << "Имя владельца - " << owner_name << endl;
+	cout << "Наименование питомника - " << nursery_name << endl;
+	cout << "Характер - " << character << endl;
+
+}
+
+void Cat::Vivod_in_fail() {
+	ofstream file1("Animals.txt", ios_base::app);
+	file1 << "____________________" << endl;
+	file1 << "Кот" << endl;
+file1 << "Порода - " << breed << endl;
+file1 << "Окрас - " << color << endl;
+file1 << "Кличка - " << name << endl;
+file1 << "Пол - " << pol << endl;
+file1 << "Дата рождения - " << date_of_birth << endl;
+file1 << "Размеры - " << dimensions << endl;
+file1 << "Имя владельца - " << owner_name << endl;
+file1 << "Наименование питомника - " << nursery_name << endl;
+file1 << "Характер - " << character << endl;
+	file1 << "____________________" << endl;
+	file1 << "\n\n";
+	file1.close();
+}
+Cat::~Cat() {}
